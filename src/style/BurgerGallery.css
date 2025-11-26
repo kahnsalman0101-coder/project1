@@ -1,0 +1,232 @@
+/* BurgerGallery.css */
+.burger-gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+}
+
+/* Gallery Header */
+.gallery-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.main-description {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #4b5563;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Burger Grid */
+.burger-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* Burger Card */
+.burger-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border: 1px solid rgba(254, 215, 170, 0.3);
+}
+
+.burger-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Favorite Button */
+.favorite-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+
+.favorite-btn:hover {
+  background: white;
+  transform: scale(1.1);
+}
+
+.favorite-btn.active {
+  animation: heartBeat 0.6s ease;
+}
+
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.3); }
+  50% { transform: scale(0.9); }
+  75% { transform: scale(1.2); }
+}
+
+/* Burger Image */
+.burger-image-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.burger-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.burger-card:hover .burger-image {
+  transform: scale(1.05);
+}
+
+/* Burger Info */
+.burger-info {
+  padding: 1.5rem;
+}
+
+.burger-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+}
+
+.burger-description {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+}
+
+.burger-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ea580c;
+  text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .burger-gallery {
+    padding: 2rem 1rem;
+  }
+  
+  .main-title {
+    font-size: 2.5rem;
+  }
+  
+  .main-description {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+  
+  .burger-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+  }
+  
+  .burger-image-container {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .burger-gallery {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .burger-info {
+    padding: 1rem;
+  }
+  
+  .burger-name {
+    font-size: 1.3rem;
+  }
+  
+  .burger-price {
+    font-size: 1.3rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .burger-gallery {
+    background: linear-gradient(135deg, #1c1917 0%, #292524 50%, #44403c 100%);
+  }
+  
+  .burger-card {
+    background: #374151;
+    border-color: rgba(251, 146, 60, 0.2);
+  }
+  
+  .burger-name {
+    color: #f3f4f6;
+  }
+  
+  .burger-description {
+    color: #d1d5db;
+  }
+  
+  .favorite-btn {
+    background: rgba(55, 65, 81, 0.9);
+  }
+  
+  .main-description {
+    color: #d1d5db;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .burger-card,
+  .favorite-btn,
+  .burger-image {
+    transition: none;
+    animation: none;
+  }
+  
+  .burger-card:hover {
+    transform: none;
+  }
+  
+  .burger-card:hover .burger-image {
+    transform: none;
+  }
+}
