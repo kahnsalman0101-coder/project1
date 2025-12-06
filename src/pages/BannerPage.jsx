@@ -6,7 +6,6 @@ const Banner = () => {
   return (
     <section className="banner-section">
       <div className="banner-container">
-        {/* Left Side - Burger Image */}
         <div className="banner-left">
           <div className="burger-image-wrapper">
             <img 
@@ -26,7 +25,6 @@ const Banner = () => {
           </div>
         </div>
 
-        {/* Right Side - Text Content */}
         <div className="banner-right">
           <div className="banner-content">
             <span className="subtitle">TRY IT TODAY</span>

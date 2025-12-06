@@ -391,8 +391,41 @@
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
+/* Responsive Design for Guarantee Section */
 
-/* Responsive Design */
+/* Large Tablets & Small Laptops */
+@media (max-width: 1024px) {
+  .guarantee-section {
+    padding: 5rem 2rem;
+  }
+  
+  .main-title {
+    font-size: 3.2rem;
+  }
+  
+  .guarantee-description {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+  }
+  
+  .features-showcase {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .feature-item {
+    padding: 2.5rem 2rem;
+  }
+  
+  .trust-badges {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
   .guarantee-section {
     padding: 4rem 1rem;
@@ -413,6 +446,8 @@
     text-align: center;
     padding: 1.5rem;
     gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
   }
   
   .phone-info {
@@ -426,19 +461,31 @@
   .features-showcase {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
   }
   
   .trust-badges {
     gap: 1rem;
+    flex-direction: column;
+    align-items: center;
   }
   
   .trust-item {
     font-size: 0.9rem;
     padding: 0.6rem 1.2rem;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
   }
 }
 
+/* Mobile Phones */
 @media (max-width: 480px) {
+  .guarantee-section {
+    padding: 3rem 1rem;
+  }
+  
   .main-title {
     font-size: 2.2rem;
   }
@@ -446,10 +493,26 @@
   .guarantee-badge {
     font-size: 0.9rem;
     padding: 0.6rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .guarantee-description {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .phone-wrapper {
+    padding: 1.25rem;
+    gap: 0.75rem;
   }
   
   .phone-number {
     font-size: 1.3rem;
+  }
+  
+  .phone-label {
+    font-size: 0.9rem;
   }
   
   .feature-item {
@@ -458,5 +521,130 @@
   
   .feature-icon {
     font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-title {
+    font-size: 1.2rem;
+  }
+  
+  .feature-description {
+    font-size: 0.9rem;
+  }
+  
+  .trust-badges {
+    gap: 0.75rem;
+  }
+  
+  .trust-item {
+    padding: 0.5rem 1rem;
+    max-width: 280px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 360px) {
+  .guarantee-section {
+    padding: 2.5rem 0.75rem;
+  }
+  
+  .main-title {
+    font-size: 1.8rem;
+  }
+  
+  .guarantee-badge {
+    font-size: 0.8rem;
+    padding: 0.5rem 1.2rem;
+  }
+  
+  .guarantee-description {
+    font-size: 0.9rem;
+  }
+  
+  .phone-number {
+    font-size: 1.1rem;
+  }
+  
+  .feature-item {
+    padding: 1.75rem 0.75rem;
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+  }
+  
+  .feature-title {
+    font-size: 1.1rem;
+  }
+  
+  .feature-description {
+    font-size: 0.85rem;
+  }
+  
+  .trust-item {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Landscape Mode for Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .guarantee-section {
+    padding: 2rem 1rem;
+  }
+  
+  .features-showcase {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+  
+  .trust-badges {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .trust-item {
+    width: auto;
+    max-width: none;
+  }
+}
+
+/* Large Desktops */
+@media (min-width: 1440px) {
+  .guarantee-section {
+    padding: 7rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .main-title {
+    font-size: 4rem;
+  }
+  
+  .features-showcase {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+  }
+  
+  .feature-item {
+    padding: 3rem 2rem;
+  }
+}
+
+/* Ultra Wide Screens */
+@media (min-width: 1920px) {
+  .guarantee-section {
+    max-width: 1800px;
+    padding: 8rem 2rem;
+  }
+  
+  .main-title {
+    font-size: 4.5rem;
+  }
+  
+  .guarantee-description {
+    font-size: 1.3rem;
+    max-width: 800px;
   }
 }

@@ -94,6 +94,24 @@ const MainSection = () => {
                 <span className="tag">Hot & Fresh</span>
               </div>
             </div>
+             <div className="feature-card">
+              <div className="feature-icon">
+                <div className="icon-wrapper delivery">
+                  <span>⚡</span>
+                </div>
+              </div>
+              <h3 className="feature-title">Fast Delivery</h3>
+              <p className="feature-description">
+                Get your burger hot and fresh in under 30 minutes. Our efficient delivery 
+                system ensures your food arrives perfect every time.
+              </p>
+              <div className="feature-tags">
+                <span className="tag">30 Min Guarantee</span>
+                <span className="tag">Hot & Fresh</span>
+              </div>
+            </div>
+            
+
           </div>
         </div>
       </section>

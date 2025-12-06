@@ -10,7 +10,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Left Side - People Section */
 .people-section {
   flex: 1;
   display: flex;
@@ -85,7 +84,6 @@
   text-align: center;
 }
 
-/* Right Side - Content Section */
 .content-section {
   flex: 1;
   padding: 20px 0;
@@ -170,8 +168,28 @@
   line-height: 1.5;
   font-size: 1rem;
 }
+/* Responsive Design for Burger Container & People Section */
 
-/* Responsive Design */
+/* Large Tablets & Small Laptops */
+@media (max-width: 1024px) {
+  .burger-container {
+    margin: 40px 30px;
+  }
+  
+  .main-title {
+    font-size: 2.5rem;
+  }
+  
+  .people-section {
+    gap: 25px;
+  }
+  
+  .person-card {
+    min-width: 300px;
+  }
+}
+
+/* Tablets */
 @media (max-width: 968px) {
   .burger-container {
     flex-direction: column;
@@ -181,7 +199,7 @@
   }
   
   .people-section {
-    flex-direction: row;
+    flex-direction: column;
     overflow-x: auto;
     padding-bottom: 20px;
     gap: 20px;
@@ -200,6 +218,7 @@
   }
 }
 
+/* Small Tablets & Large Phones */
 @media (max-width: 768px) {
   .burger-container {
     padding: 20px;
@@ -226,9 +245,86 @@
   
   .people-section {
     flex-direction: column;
+    overflow-x: visible;
   }
   
   .person-card {
     min-width: auto;
+    width: 90%;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .burger-container {
+    padding: 15px;
+    margin: 15px 10px;
+    gap: 30px;
+  }
+  
+  .main-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .person-image {
+    height: 160px;
+  }
+  
+  .person-name {
+    font-size: 1.1rem;
+  }
+  
+  .person-role {
+    font-size: 0.9rem;
+  }
+  
+  .point-item {
+    gap: 10px;
+  }
+  
+  .point-text h3 {
+    font-size: 1rem;
+  }
+  
+  .point-text p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 360px) {
+  .burger-container {
+    padding: 10px;
+    margin: 10px 5px;
+  }
+  
+  .main-title {
+    font-size: 1.3rem;
+  }
+  
+  .person-image {
+    height: 140px;
+  }
+  
+  .people-section {
+    gap: 15px;
+  }
+}
+
+/* Landscape Mode for Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .burger-container {
+    flex-direction: row;
+    gap: 30px;
+  }
+  
+  .people-section {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  
+  .person-card {
+    min-width: 250px;
   }
 }
